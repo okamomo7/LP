@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" type="image/png" href="logo-misora.png" />
+  <title>ミソラコネクト | 上り大容量通信プラン</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card: #f7f9fc;
+      --muted: #4a5568;
+      --text: #1a202c;
+      --accent: #43C6FA;
+      --cta: #43C6FA;
+      --shadow: 0 8px 24px rgba(0,0,0,.1);
+      --radius: 16px;
+      --radius-lg: 24px;
+      --maxw: 1100px;
+    }
+    body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif; }
+    a { color: var(--accent); text-decoration: none; }
+    header.hero { background: #fff; }
+    .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+    .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; align-items: center; }
+    .badge { display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(67,198,250,0.15); color: var(--accent); font-weight: 700; font-size: 12px; }
+    h1 { font-size: clamp(28px, 4.2vw, 48px); margin: 12px 0 8px; }
+    .lead { font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); margin-bottom: 18px; }
+    .btn { display: inline-flex; padding: 12px 18px; border-radius: 12px; border: 1px solid rgba(0,0,0,.1); font-weight: 600; }
+    .btn.primary { background: var(--accent); color: #fff; }
+    .btn.ghost { background: transparent; border: 1px solid rgba(0,0,0,.1); }
+    .hero-card { background: var(--card); padding: 24px; border-radius: var(--radius-lg); box-shadow: var(--shadow); }
+    .grid { display: grid; gap: 16px; }
+    .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .card { background: var(--card); border: 1px solid rgba(0,0,0,.05); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+    section { padding: 42px 0; background: #fff; }
+    section h2 { font-size: clamp(22px, 3.4vw, 32px); margin: 0 0 16px; }
+    .notice { font-size: 13px; color: var(--muted); border-left: 3px solid rgba(67,198,250,.5); padding-left: 12px; }
+    footer { padding: 40px 24px; border-top: 1px solid rgba(0,0,0,.1); color: var(--muted); background:#fff; }
+    @media (max-width: 900px) {
+      .hero .wrap { grid-template-columns: 1fr; }
+      .grid.cols-3 { grid-template-columns: 1fr; }
+      .grid.cols-2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="wrap">
+        <div>
+          <img src="logo-misora.png" alt="Misora Connect ロゴ" style="height:120px; display:block; margin-bottom:20px;" />
+          <span class="badge">ミソラコネクト</span>
+          <h1>上り大容量 通信が <span style="color:var(--accent)">月額 2,000 円 (税抜)～</span></h1>
+          <p class="lead">企業様のビジネス通信を支える高品質インターネット回線サービス。柔軟なプラン設計とセキュリティオプションで、お客様のニーズに最適なソリューションをご提供いたします。</p>
+          <div class="cta-row">
+            <a class="btn primary" href="#contact">お問い合わせはこちら</a>
+            <a class="btn" href="#download">資料ダウンロード</a>
+            <a class="btn ghost" href="#plans">プランを見る</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <p>お気軽にお問い合わせください。専門スタッフがお客様の環境に最適なプランをご提案いたします。無料相談・お見積りも承っております。</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="download">
+      <div class="container">
+        <h2>詳細資料をご確認ください</h2>
+        <p class="lead">詳細情報をまとめた資料をダウンロードいただけます。</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#contact">資料ダウンロード</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="problems">
+      <div class="container">
+        <h2>こんなお悩みありませんか？</h2>
+        <div class="grid cols-3">
+          <div class="card"><h3>大容量プランの価格が高い</h3><p>コストを抑えたい…</p></div>
+          <div class="card"><h3>自社に合うプランが見つからない</h3><p>用途にフィットしたメニューを選びたい…</p></div>
+          <div class="card"><h3>セキュリティに不安がある</h3><p>閉域やVPNなども相談したい…</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions">
+      <div class="container">
+        <h2>そのお悩み、ミソラコネクトが解決します！</h2>
+        <p class="lead">用途に合わせて充実したプランをご用意。</p>
+        <div class="grid cols-3">
+          <div class="card"><h3>シェアプラン</h3><p>全回線で通信量をシェア。</p></div>
+          <div class="card"><h3>二段階定額プラン</h3><p>利用状況に合わせてムダを削減。</p></div>
+          <div class="card"><h3>個別定額プラン</h3><p>数MB～数百GBまで柔軟にご用意。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="plans">
+      <div class="container">
+        <h2>上り通信・夜間特化プラン</h2>
+        <div class="grid cols-2">
+          <div class="card"><h3>上り通信向け専用大容量プラン</h3><ul><li>動画アップロードやIoTデータ送信に最適</li></ul></div>
+          <div class="card"><h3>夜間格安通信プラン</h3><p>夜間〜早朝帯を活用。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="security">
+      <div class="container">
+        <h2>セキュリティオプション</h2>
+        <div class="grid cols-3">
+          <div class="card"><h3>IPアクセス制限</h3><p>指定IPのみ許可。</p></div>
+          <div class="card"><h3>インターネットVPN</h3><p>暗号化で安全な通信。</p></div>
+          <div class="card"><h3>閉域接続</h3><p>専用回線で最高レベルのセキュリティ。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="usecases">
+      <div class="container">
+        <h2>IoT通信のご利用例</h2>
+        <div class="grid cols-3">
+          <div class="card"><h3>監視カメラシステム</h3><p>映像をクラウドにアップロード。</p></div>
+          <div class="card"><h3>データバックアップ</h3><p>重要データを定期的にバックアップ。</p></div>
+          <div class="card"><h3>IoTデータ収集</h3><p>センサーのデータを効率的に収集。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <h2>よくあるご質問</h2>
+        <dl>
+          <dt>Q：最低利用期間は？</dt><dd>A：1か月～ご利用可能。</dd>
+          <dt>Q：最低注文数は？</dt><dd>A：1回線～可能。</dd>
+          <dt>Q：SIMサイズは？</dt><dd>A：マルチカットSIM。</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>今すぐ始める「ミソラコネクト」</h2>
+        <p class="lead">コスト削減とセキュリティ強化を同時に実現。</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#contact">お問い合わせはこちら</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>&copy; Misora Connect. All rights reserved.</small>
+    </div>
+  </footer>
+</body>
+</html>
