@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="icon" type="image/png" href="logo-misora-new.png" />
+  <link rel="icon" type="image/png" href="./logo-misora-new.png" />
   <title>ミソラコネクト | 上り大容量通信プラン</title>
   <style>
     :root {
@@ -30,23 +31,24 @@
     header.hero {
       position: relative;
       padding: 40px 0;
-      background: url('hero-bg.png') no-repeat center/cover;
+      background: url('./hero-bg.png') no-repeat center/cover;
     }
-    header.hero::before { content:""; position: absolute; inset:0; background: rgba(255,255,255,.6); }
+    /* ヒーローの透過（濃いめ） */
+    header.hero::before { content:""; position: absolute; inset: 0; background: rgba(255,255,255,.75); }
     header.hero .container { position: relative; z-index: 1; }
     h1 { font-size: clamp(28px, 4.2vw, 48px); margin: 12px 0 8px; }
     .lead { font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); margin-bottom: 18px; }
-    .btn { display:inline-flex; padding:12px 18px; border-radius:12px; border:1px solid rgba(0,0,0,.1); font-weight:600; margin-right:10px; }
-    .btn.primary { background:#43C6FA; color:#fff; }
-    .btn.ghost { background: transparent; border:1px solid rgba(0,0,0,.1); }
-    section { padding:42px 0; position: relative; }
-    section h2 { font-size: clamp(22px, 3.4vw, 32px); margin:0 0 16px; text-align:center; }
-    section p.intro { text-align:center; font-size:16px; margin:6px auto 16px; color:var(--text); max-width:1000px; }
-    section p.highlight { text-align:center; font-size:22px; font-weight:bold; color:var(--highlight); margin-bottom:24px; }
+    .btn { display: inline-flex; padding: 12px 18px; border-radius: 12px; border: 1px solid rgba(0,0,0,.1); font-weight: 600; margin-right:10px; }
+    .btn.primary { background: var(--accent); color: #fff; }
+    .btn.ghost { background: transparent; border: 1px solid rgba(0,0,0,.1); }
+    section { padding: 42px 0; position: relative; }
+    section h2 { font-size: clamp(22px, 3.4vw, 32px); margin: 0 0 16px; text-align:center; }
+    section p.intro { text-align:center; font-size: 16px; margin: 6px auto 16px; color: var(--text); max-width: 1000px; }
+    section p.highlight { text-align:center; font-size: 22px; font-weight: bold; color: var(--highlight); margin-bottom: 24px; }
     .plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .plans-grid img { width: 100%; border-radius: 12px; box-shadow: var(--shadow); }
+    .plans-grid img { width: 100%; border-radius: 12px; box-shadow: var(--shadow); background:#fff; }
     /* 上り通信・夜間特化プラン（透過背景） */
-    #plans { background: url('plans-bg.png') no-repeat center/cover; overflow: hidden; }
+    #plans { background: url('./plans-bg.png') no-repeat center/cover; overflow: hidden; }
     #plans::before { content: ""; position: absolute; inset: 0; background: rgba(255,255,255,.75); backdrop-filter: saturate(1.1); }
     #plans .container { position: relative; z-index: 1; }
     .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
@@ -54,18 +56,18 @@
     .plan-card h3 { margin: 0 0 8px; color: var(--accent); font-size: 20px; }
     .plan-card p { margin: 6px 0; line-height: 1.75; }
     /* お悩み画像 */
-    .problems-img { display:block; margin:20px auto; max-width:1200px; width:100%; border-radius:12px; box-shadow: var(--shadow); }
+    .problems-img { display:block; margin:20px auto; max-width:1200px; width:100%; border-radius:12px; box-shadow: var(--shadow); background:#fff; }
     /* セキュリティ画像（containで切れない） */
     .security-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
     .security-grid img { width:100%; height:360px; object-fit: contain; background:#fff; border-radius:12px; box-shadow: var(--shadow); }
     /* IoT通信のご利用例（背景とカード） */
-    #examples { background: url('iot-examples-bg.png') no-repeat center/cover; position: relative; }
+    #examples { background: url('./iot-examples-bg.png') no-repeat center/cover; position: relative; }
     #examples::before { content:""; position:absolute; inset:0; background: rgba(255,255,255,0.85); }
     #examples .container { position: relative; z-index:1; }
     #examples .cards { display:grid; gap:16px; grid-template-columns: repeat(5, 1fr); }
     #examples img { width:100%; height:220px; object-fit: contain; background:#fff; border-radius:12px; box-shadow: var(--shadow); }
     /* ユースケース（背景付き） */
-    #usecases { background: url('usecase-bg.png') no-repeat center/cover; position: relative; }
+    #usecases { background: url('./usecase-bg.png') no-repeat center/cover; position: relative; }
     #usecases::before { content:""; position:absolute; inset:0; background: rgba(255,255,255,0.7); }
     #usecases .container { position: relative; z-index:1; }
     .usecase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -93,7 +95,7 @@
 <body>
   <header class="hero">
     <div class="container">
-      <img src="logo-misora-new.png" alt="Misora Connect ロゴ" style="height:80px; display:block; margin-bottom:20px;" />
+      <img src="./logo-misora-new.png" alt="Misora Connect ロゴ" style="height:80px; display:block; margin-bottom:20px;" />
       <h1>上り大容量 通信が <span style="color:var(--accent)">月額 2,000 円 (税抜)～</span></h1>
       <p class="lead">企業様のビジネス通信を支える高品質インターネット回線サービス。柔軟なプラン設計とセキュリティオプションで、お客様のニーズに最適なソリューションをご提供いたします。</p>
       <div class="cta-row">
@@ -107,7 +109,7 @@
     <section id="problems">
       <div class="container">
         <h2>こんなお悩みありませんか？</h2>
-        <img class="problems-img" src="problems-img3.png" alt="こんなお悩みのイメージ" />
+        <img class="problems-img" src="./problems-img3.png" alt="こんなお悩みのイメージ" />
       </div>
     </section>
 
@@ -117,9 +119,9 @@
         <p class="intro">ミソラコネクトでは用途に合わせて充実したプランをご用意！</p>
         <p class="highlight">数MB～数百GBまでプランをご用意！！ご希望のプランが見つかる！</p>
         <div class="plans-grid">
-          <img src="plan-img1.png" alt="二段階定額プラン" />
-          <img src="plan-img2.png" alt="シェアプラン" />
-          <img src="plan-img3.png" alt="個別定額プラン" />
+          <img src="./plan-twostep.png" alt="二段階定額プラン" />
+          <img src="./plan-share.png" alt="シェアプラン" />
+          <img src="./plan-fixed.png" alt="個別定額プラン" />
         </div>
       </div>
     </section>
@@ -134,7 +136,7 @@
             <p>各種カメラの動画アップロードやIoTデータの送信等の<br/>用途に最適なプランです。</p>
           </div>
           <div class="plan-card">
-            <h3>夜間のみしか通信しない方に！</h3>
+            <h3>夜間利用でコストを抑えたい方に！</h3>
             <p><strong>夜間格安通信プランをご用意！</strong></p>
             <p>法人利用の少ない夜間早朝の時間帯を活用し、通信料金をお得にご利用いただけます。<br/>デジタルサイネージ、カメラ映像監視、IoTデータ、店舗無人化ソリューション等の通信費節約に最適です。</p>
           </div>
@@ -146,8 +148,9 @@
       <div class="container">
         <h2>セキュリティオプション</h2>
         <div class="security-grid">
-          <img src="security1.png" alt="IPアクセス制限" />
-          <img src="security2.png" alt="インターネットVPN・閉域接続" />
+          <!-- 順番を逆に：左=IPアクセス制限、右=VPN/閉域接続 -->
+          <img src="./E91E3E42-A955-4610-9D8C-EEE3C1889AAF.png" alt="IPアクセス制限" />
+          <img src="./A3A46C86-E2A7-4BCC-BC58-5B3DCA5C1657.png" alt="インターネットVPN・閉域接続" />
         </div>
       </div>
     </section>
@@ -158,15 +161,15 @@
         <p class="intro">
           お客様の展開計画や数量規模に応じて価格のご相談に応じます。まずはお気軽にお問い合わせください。<br/>
           表示されているプランは参考価格となり、特定の条件に基づいた概算です。<br/>
-          お客様のご利用用途や通信料量、に合わせて料金が異なります。<br/>
-          お客様に最適な詳細な料金プランについては、お問い合わせフォームよりお気軽にお問い合わせください
+          お客様のご利用用途や通信量により料金が異なります。<br/>
+          最適な詳細な料金プランについては、お問い合わせフォームよりお気軽にお問い合わせください。
         </p>
         <div class="cards">
-          <img src="iot-example1.png" alt="ご利用例 1" />
-          <img src="iot-example2.png" alt="ご利用例 2" />
-          <img src="iot-example3.png" alt="ご利用例 3" />
-          <img src="iot-example4.png" alt="ご利用例 4" />
-          <img src="iot-example5.png" alt="ご利用例 5" />
+          <img src="./iot-example1.png" alt="ご利用例 1" />
+          <img src="./iot-example2.png" alt="ご利用例 2" />
+          <img src="./iot-example3.png" alt="ご利用例 3" />
+          <img src="./iot-example4.png" alt="ご利用例 4" />
+          <img src="./iot-example5.png" alt="ご利用例 5" />
         </div>
       </div>
     </section>
@@ -176,17 +179,17 @@
         <h2>ユースケース</h2>
         <div class="usecase-grid">
           <div class="usecase-card">
-            <img src="iot3.png" alt="監視カメラシステム" />
+            <img src="./iot3.png" alt="監視カメラシステム" />
             <h3>監視カメラシステム</h3>
             <p>店舗や施設の監視カメラ映像をクラウドへアップロード。セキュリティオプションと組みあわせることで安心安全にご利用可能です。</p>
           </div>
           <div class="usecase-card">
-            <img src="iot2.png" alt="データバックアップ" />
+            <img src="./iot2.png" alt="データバックアップ" />
             <h3>データバックアップ</h3>
             <p>重要なビジネスデータを定期的にクラウドストレージへバックアップ。データ損失リスクを最小限に抑制します。</p>
           </div>
           <div class="usecase-card">
-            <img src="iot1.png" alt="IoTデータ収集" />
+            <img src="./iot1.png" alt="IoTデータ収集" />
             <h3>IoTデータ収集</h3>
             <p>製造業での生産設備やセンサーデータを効率的に収集・送信。リアルタイムでの品質管理をサポートします。</p>
           </div>
